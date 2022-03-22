@@ -1,0 +1,1 @@
+# elasticpress-type-boost
