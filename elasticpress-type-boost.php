@@ -60,7 +60,7 @@ class ElasticPress_Type_Boost extends Feature
     }
 
     /**
-     * Returns true/false if decaying is/isn't enabled
+     * Returns true/false if type boosting is/isn't enabled
      *
      * @return bool
      */
