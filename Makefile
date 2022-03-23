@@ -1,4 +1,4 @@
-.PHONY: dist clean
+.PHONY: dist clean score
 
 ROOT_DIR:=$(shell dirname $(realpath $(firstword $(MAKEFILE_LIST))))
 
@@ -11,5 +11,8 @@ dist/elasticpress_type_boost.zip: *.php
 clean:
 	@rm -rf dist
 
-score:
-	@cat score.js | tr -d '\n' | sed 's/  */ /g'
+score: dist/score.js
+
+dist/score.js:
+	@mkdir -p dist
+	@cat score.js | tr -d '\n' | sed 's/  */ /g' | tee dist/score.js
